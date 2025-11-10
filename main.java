@@ -18,13 +18,15 @@ public class Main{
       }
     if(numstr.charAt(i) == '9'||numstr.length()==1){
       cont=0;
-    }else{
+    }else if(cont==1){
       numdig=Integer.parseInt(String.valueOf(numstr.charAt(i)));
        sum+=numdig*Math.pow(maxdig,numstr.length()-i-1);
     }
       }
+      if(cont==1){
       num=sum;
-    }
+      }
+          }
     System.out.println(num);
   }
 }
